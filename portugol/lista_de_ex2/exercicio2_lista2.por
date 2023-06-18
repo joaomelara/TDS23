@@ -13,16 +13,20 @@ programa
 
 		inteiro E
 
-		se (N<50)
+		se (N<=50 e N>=0)
 		{
 		E = 0
 		escreva ("Seu salário foi de R$", N*10, " e seu excedente foi ", E)
 		}
 
-		senao
+		senao se(N>50)
 		{
 		E = N - 50
 		escreva ("Seu salário inicial foi de R$", N*10, " e seu excedente foi de RS", E*20, " e portanto seu salário total foi de R$", (N*10)+(E*20)) 
+		}
+		senao
+		{
+			escreva("Digite um número plausível de horas")
 		}
 	}
 }
@@ -31,7 +35,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 398; 
+ * @POSICAO-CURSOR = 530; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
