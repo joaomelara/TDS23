@@ -22,7 +22,8 @@ programa
 		senao se(N>50)
 		{
 		E = N - 50
-		escreva ("Seu salário inicial foi de R$", N*10, " e seu excedente foi de RS", E*20, " e portanto seu salário total foi de R$", (N*10)+(E*20)) 
+		N = N - E
+		escreva ("Seu salário inicial foi de R$", N*10, " e seu excedente foi de R$", E*20, " e portanto seu salário total foi de R$", (N*10)+(E*20)) 
 		}
 		senao
 		{
@@ -35,7 +36,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 530; 
+ * @POSICAO-CURSOR = 333; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
