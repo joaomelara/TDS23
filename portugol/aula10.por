@@ -3,27 +3,20 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro numero
-		escreva("Digite um número inteiro de sua preferência:\n")
-		leia(numero)
-
-		se(numero%2 == 0)
-		{
-			escreva("O número escrito é par")
+		inteiro num
+		escreva("Digite um número entre 2 e 9:\n")
+		leia(num)
+		
+		se(num >= 2 e num <=9){
+		para (inteiro x=0; x<=10; x++ ){
+			escreva(num, "*", x, " = ", num*x, "\n")
+			}
 		}
 		senao
-		{
-			escreva("O número escrito é impar")
-		}
-
-		se(numero > 0)
-		{
-			escreva(" e positivo")
-		}
-		senao
-		{
-			escreva(" e negativo.")
-		}
+		escreva("Entre 2 e 9, seu panguá")
+		
+		
+		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -31,7 +24,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 263; 
+ * @POSICAO-CURSOR = 87; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

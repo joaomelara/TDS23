@@ -3,27 +3,20 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro numero
-		escreva("Digite um número inteiro de sua preferência:\n")
-		leia(numero)
-
-		se(numero%2 == 0)
+		inteiro total = 0
+		para(inteiro x=1; x<=100; x++)
 		{
-			escreva("O número escrito é par")
+			se(x%2==0)
+			{
+				escreva(x, " - par\n")
+				total += x
+			}
+			senao
+			{
+				escreva(x, " - impar\n")
+			}
 		}
-		senao
-		{
-			escreva("O número escrito é impar")
-		}
-
-		se(numero > 0)
-		{
-			escreva(" e positivo")
-		}
-		senao
-		{
-			escreva(" e negativo.")
-		}
+		escreva("Soma dos pares é: ", total)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -31,7 +24,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 263; 
+ * @POSICAO-CURSOR = 251; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

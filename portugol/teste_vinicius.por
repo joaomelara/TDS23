@@ -3,26 +3,13 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro numero
-		escreva("Digite um número inteiro de sua preferência:\n")
-		leia(numero)
-
-		se(numero%2 == 0)
-		{
-			escreva("O número escrito é par")
-		}
-		senao
-		{
-			escreva("O número escrito é impar")
-		}
-
-		se(numero > 0)
-		{
-			escreva(" e positivo")
-		}
-		senao
-		{
-			escreva(" e negativo.")
+		para(inteiro x = 0; x<=10; x++){
+			para(inteiro y = 0; y<=10; y++){
+				escreva(x,"x",y," = ",x*y,"\n")
+				se(y==10){
+					escreva("\n")
+			}
+			}
 		}
 	}
 }
@@ -31,7 +18,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 263; 
+ * @POSICAO-CURSOR = 199; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
