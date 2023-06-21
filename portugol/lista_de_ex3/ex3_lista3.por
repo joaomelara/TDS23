@@ -3,36 +3,35 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro num = 0
-		inteiro media = 0
-		inteiro quant = 0
-		inteiro total = 0
-
-		enquanto(num>0)
-			se(num>=0){
-			escreva("Digite números: \n")
-			leia(num)
-			quant++
-			total += num
-			media = total/quant
+	inteiro numero = 0
+	real total = 0.0
+	real quant = 0.0
+	real media = 0.0
+		
+		
+		enquanto ( numero >= 0 )
+		{
+			escreva ("Insira um número: ")
+			leia (numero)
 			
-			}
-			senao
-			pare
-
-		escreva("MEDIA DOS NUMEROs: ", media)
-		escreva("\nQUANT DOS NUMEROs: ", quant)
-		escreva("\nTOTAL DOS NUMEROs: ", total)
-			
+				se (numero > 0)
+				{
+				total += numero
+				media = (total/quant)
+				quant++
+				}
+		}
+		escreva ("O TOTAL DOS NÚMEROS É ", total)
+		escreva ("\nA QUANTIDADE DOS NÚMEROS É ", quant)
+		escreva ("\nA MÉDIA DOS NÚMEROS É ", media)
 	}
 }
-
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 362; 
+ * @POSICAO-CURSOR = 52; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
