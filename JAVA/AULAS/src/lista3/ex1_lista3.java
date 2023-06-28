@@ -30,7 +30,7 @@ public class ex1_lista3 {
 				mediaSalario = totalSal/3;
 				
 				totalFilho += filho;
-				mediaFilhos = totalSal/3;
+				mediaFilhos = totalFilho/3;
 				
 				if(salario>=100)
 				{

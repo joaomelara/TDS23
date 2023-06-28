@@ -1,3 +1,4 @@
+package aulas_e_exemplos;
 import java.util.Scanner;
 
 public class parImpar {
