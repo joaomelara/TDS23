@@ -23,8 +23,7 @@ public class ex_faltasNotas {
 				System.out.println(Cod[x]+"\t\t"+Notas1[x]+"\t\t"+Notas2[x]+"\t\t"+Faltas[x]+"\t\t"+Nomes[x]);
 			}
 			System.out.println("\n\nInsira o código: ");
-			Codi = input.next();
-		
+			Codi = input.next();		
 			
 			for(int x=0; x<Nomes.length; x++) {
 				if(Cod[x].equals(Codi))
