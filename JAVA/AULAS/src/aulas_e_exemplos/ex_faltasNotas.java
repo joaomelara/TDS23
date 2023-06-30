@@ -13,8 +13,8 @@ public class ex_faltasNotas {
 			double[] Notas2 = new double[27];
 			int[] Faltas = new int[27];
 			String Codi;
-			double media;
 			char res;
+			double[] media1 = new double[27];
 			
 
 			System.out.println("CÓDIGO\t\tNOTA1\t\tNOTA2\t\tFALTAS\t\tALUNOS");
@@ -36,30 +36,26 @@ public class ex_faltasNotas {
 					System.out.println("\n\nDiga-me o número de faltas?");
 					Faltas[x] = input.nextInt();
 					
-					media = ((Notas1[x]+Notas2[x])/2);
+					media1[x] = ((Notas1[x]+Notas2[x])/2);
 					
-					if( media >= 6 && media <=10 && Faltas[x] <=40 && Faltas[x] >=0){
+					if( media1[x] >= 6 && media1[x] <=10 && Faltas[x] <=40 && Faltas[x] >=0){
 						System.out.println("\n\nSTATUS DO ALUNOS " +Nomes[x]+" : APROVADO\n\n");
 					}
-					else if(media<6 && media>=0 && Faltas[x]>40)
+					else if(media1[x]<6 && media1[x]>=0 && Faltas[x]>40)
 					{
 						System.out.println("\n\nSTATUS DO ALUNO "+Nomes[x]+": REPROVADO\n\n");
 					}
-					else
+					else if(!Cod[x].equals(Codi))
 					{
 						System.out.println("\n\nDIGITE UM NÚMERO VÁLIDO\n\n");
 					}
 				}
-				else
-				{
-					System.out.println("Digite um código válido\n\n");
-				}
 			}
 			
-			System.out.println("CÓDIGO\t\tNOTA1\t\tNOTA2\t\tFALTAS\t\tALUNOS");
+			System.out.println("CÓDIGO\t\tNOTA1\t\tNOTA2\t\tMEDIA\t\tFALTAS\t\tALUNOS");
 			for(int x=0; x<Nomes.length; x++)
 			{
-				System.out.println(Cod[x]+"\t\t"+Notas1[x]+"\t\t"+Notas2[x]+"\t\t"+Faltas[x]+"\t\t"+Nomes[x]);
+				System.out.println(Cod[x]+"\t\t"+Notas1[x]+"\t\t"+Notas2[x]+"\t\t"+media1[x]+"\t\t"+Faltas[x]+"\t\t"+Nomes[x]);
 			}
 			
 			System.out.println("Quer prosseguir inserindo notas? (S)");
@@ -84,12 +80,13 @@ public class ex_faltasNotas {
 						System.out.println("\n\nDiga-me o número de faltas?");
 						Faltas[x] = input.nextInt();
 						
-						media = ((Notas1[x]+Notas2[x])/2);
+						media1[x] = ((Notas1[x]+Notas2[x])/2);
+					
 						
-						if( media >= 6 && media <=10 && Faltas[x] <=40 && Faltas[x] >=0){
+						if(media1[x] >= 6 && media1[x] <=10 && Faltas[x] <=40 && Faltas[x] >=0){
 							System.out.println("\n\nAPROVADO\n\n");
 						}
-						else if(media<6 && media>=0 && Faltas[x]>40)
+						else if(media1[x]<6 && media1[x]>=0 && Faltas[x]>40)
 						{
 							System.out.println("\n\nREPROVADO\n\n");
 						}
@@ -98,15 +95,17 @@ public class ex_faltasNotas {
 							System.out.println("\n\nDIGITE UM NÚMERO VÁLIDO\n\n");
 						}
 					}
-					else
+					else if(!Cod[x].equals(Codi))
 					{
-						System.out.println("Digite um código válido\n\n");
+						System.out.println("DIGITE O CÓDIGO CERTO");
+						break;
 					}
+			
 				}
-				System.out.println("CÓDIGO\t\tNOTA1\t\tNOTA2\t\tFALTAS\t\tALUNOS");
+				System.out.println("CÓDIGO\t\tNOTA1\t\tNOTA2\t\tMEDIAS\t\tFALTAS\t\tALUNOS");
 				for(int x=0; x<Nomes.length; x++)
 				{
-					System.out.println(Cod[x]+"\t\t"+Notas1[x]+"\t\t"+Notas2[x]+"\t\t"+Faltas[x]+"\t\t"+Nomes[x]);
+					System.out.println(Cod[x]+"\t\t"+Notas1[x]+"\t\t"+Notas2[x]+"\t\t"+media1[x]+"\t\t"+Faltas[x]+"\t\t"+Nomes[x]);
 				}
 				System.out.println("Quer prosseguir inserindo notas? (S)");
 				res = input.next().toUpperCase().charAt(0);
