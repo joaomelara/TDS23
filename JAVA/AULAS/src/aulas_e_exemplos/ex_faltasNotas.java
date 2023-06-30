@@ -13,6 +13,7 @@ public class ex_faltasNotas {
 			double[] Notas2 = new double[27];
 			int[] Faltas = new int[27];
 			String Codi;
+	
 			char res;
 			double[] media1 = new double[27];
 			
@@ -81,26 +82,19 @@ public class ex_faltasNotas {
 						Faltas[x] = input.nextInt();
 						
 						media1[x] = ((Notas1[x]+Notas2[x])/2);
-					
 						
-						if(media1[x] >= 6 && media1[x] <=10 && Faltas[x] <=40 && Faltas[x] >=0){
-							System.out.println("\n\nAPROVADO\n\n");
+						if( media1[x] >= 6 && media1[x] <=10 && Faltas[x] <=40 && Faltas[x] >=0){
+							System.out.println("\n\nSTATUS DO ALUNOS " +Nomes[x]+" : APROVADO\n\n");
 						}
 						else if(media1[x]<6 && media1[x]>=0 && Faltas[x]>40)
 						{
-							System.out.println("\n\nREPROVADO\n\n");
+							System.out.println("\n\nSTATUS DO ALUNO "+Nomes[x]+": REPROVADO\n\n");
 						}
-						else
+						else if(!Cod[x].equals(Codi))
 						{
 							System.out.println("\n\nDIGITE UM NÚMERO VÁLIDO\n\n");
 						}
 					}
-					else if(!Cod[x].equals(Codi))
-					{
-						System.out.println("DIGITE O CÓDIGO CERTO");
-						break;
-					}
-			
 				}
 				System.out.println("CÓDIGO\t\tNOTA1\t\tNOTA2\t\tMEDIAS\t\tFALTAS\t\tALUNOS");
 				for(int x=0; x<Nomes.length; x++)
