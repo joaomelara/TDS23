@@ -14,6 +14,8 @@ public abstract class Conta {
 		super();
 		this.numero = numero;
 		this.cpf = cpf;
+		
+		
 	}
 	
 	
