@@ -3,7 +3,7 @@ package entities;
 public class Corrente extends Conta {
 	private int contadorTalao = 3;
 	
-	public Corrente(int numero, String cpf, int contadorTalao) {
+	public Corrente(int numero, String cpf) {
 		super(numero, cpf);
 		this.contadorTalao = contadorTalao;
 	}
