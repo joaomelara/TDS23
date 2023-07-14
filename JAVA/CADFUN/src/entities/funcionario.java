@@ -1,43 +1,56 @@
 package entities;
 
-public class funcionario {
-	private String Matricula;
-	private String Nome;
-	private double valorHora;
-	private int horasTrabalhadas;
+public class Funcionario {
+
+	private String matricula = "";
+	private String nome = "";
+	private double valorHora = 0;
+	private int horasTrabalhadas = 0;
 	
-	public funcionario(String matricula, String nome, double valorHora, int horasTrabalhadas) {
+	
+	
+	public Funcionario(String matricula, String nome, double valorHora, int horasTrabalhadas) {
 		super();
-		Matricula = matricula;
-		Nome = nome;
+		this.matricula = matricula;
+		this.nome = nome;
 		this.valorHora = valorHora;
 		this.horasTrabalhadas = horasTrabalhadas;
+	}
+	
+	public Funcionario (String matricula, String nome) {
+		this.matricula = matricula;
+		this.nome = nome;
+	}
+	
+	public Funcionario () {
 		
 	}
 
+	
+
 	public String getMatricula() {
-		return Matricula;
+		return matricula;
 	}
 
 	public void setMatricula(String matricula) {
-		Matricula = matricula;
+		this.matricula = matricula;
 	}
 
 	public String getNome() {
-		return Nome;
+		return nome;
 	}
 
 	public void setNome(String nome) {
-		Nome = nome;
+		this.nome = nome;
 	}
 
 	public double getValorHora() {
 		return valorHora;
-		}
-	/*
+	}
+
 	public void setValorHora(double valorHora) {
 		this.valorHora = valorHora;
-	}*/
+	}
 
 	public int getHorasTrabalhadas() {
 		return horasTrabalhadas;
@@ -47,11 +60,10 @@ public class funcionario {
 		this.horasTrabalhadas = horasTrabalhadas;
 	}
 
-	@Override
 	public double retornarSalario() {
-		return (this.valorHora * this.horasTrabalhadas);
+		return (this.horasTrabalhadas * this.valorHora);
+		
 	}
 	
-
-}
 	
+}
