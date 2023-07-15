@@ -5,8 +5,9 @@ public class Especial extends Conta{
 	
 	private double limite = 1000.00;
 	
-	public Especial(int numero, String cpf) {
+	public Especial(int numero, String cpf, double limite) {
 		super(numero, cpf);
+		this.limite = limite;
 
 	}
 
@@ -14,7 +15,11 @@ public class Especial extends Conta{
 	
 	@Override
 	public void debito(double saldoF2){
-		if(this.getSaldo() - saldoF2 < 0 && (this.limite + this.getSaldo()) - saldoF2 >= 0) {
+		if(saldoF2 <= 0) {
+			System.out.println("Escreva um número válido!!!!");
+		}
+		
+		else if(this.getSaldo() - saldoF2 < 0 && (this.limite + this.getSaldo()) - saldoF2 >= 0) {
 			this.limite = (this.getSaldo() + this.limite) - saldoF2;
 			super.debito(getSaldo());
 		}
