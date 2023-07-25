@@ -9,7 +9,7 @@ class productTest {
 
 	@Test
 	void testIncluirEstoque() {
-		product p1 = new product("1","teste",10.00,0);
+		product p1 = new product("1","teste",0,0);
 		p1.incluirEstoque(10);
 		Assertions.assertEquals(10, p1.getEstoque());
 		p1.incluirEstoque(0);
