@@ -1,6 +1,5 @@
 
-public class CD {
-	private String titulo;
+public class CD extends Item {
 	private String artista;
 	private int numeroFaixa;
 	private String gravadora;
@@ -10,21 +9,13 @@ public class CD {
 	}
 
 	
-	public CD(String titulo, String artista, int numeroFaixa, String gravadora) {
+	public CD(String artista, int numeroFaixa, String gravadora) {
 		super();
-		this.titulo = titulo;
 		this.artista = artista;
 		this.numeroFaixa = numeroFaixa;
 		this.gravadora = gravadora;
 	}
 
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
 
 	public String getArtista() {
 		return artista;
@@ -49,6 +40,7 @@ public class CD {
 	public void setGravadora(String gravadora) {
 		this.gravadora = gravadora;
 	}
+	
 	
 	
 }
