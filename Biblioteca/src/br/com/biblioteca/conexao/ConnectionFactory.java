@@ -17,7 +17,7 @@ public class ConnectionFactory {
     public Connection getConnection(){
         Connection con = null;
         try {
-            con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;banco=db_Bibliotecas;usuario=sa;senha=TecInfo");
+            con = DriverManager.getConnection("jdbc:sqlserver://D9995NE071:1433;database=db_Bibliotecas;user=sa;password=TecInfo;encrypt=true;trustServerCertificate=true");
             
             
         }catch(SQLException e){

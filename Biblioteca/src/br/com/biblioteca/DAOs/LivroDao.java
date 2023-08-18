@@ -98,7 +98,7 @@ livro.setCodigo(resultSet.getInt("codLivro"));
 livro.setTitulo(resultSet.getString("titulo"));
 livro.setAutor(resultSet.getString("autor"));
 livro.setEditora(resultSet.getString("editora"));
-livro.setNumeroPaginas(resultSet.getInt("numeroPa"));
+livro.setNumeroPaginas(resultSet.getInt("numeroPaginas"));
 listaLivros.add(livro);
 }
 
