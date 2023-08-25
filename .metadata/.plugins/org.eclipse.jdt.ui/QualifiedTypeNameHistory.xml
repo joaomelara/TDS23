@@ -9,4 +9,5 @@
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="br.com.cliente.entidade.Usuario"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.servlet.jsp.JspException"/>
 </qualifiedTypeNameHistroy>
