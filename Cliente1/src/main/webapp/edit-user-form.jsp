@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Inserir usuario</title>
+<title>Editar Usuario</title>
 </head>
 <body>
 	
@@ -23,21 +23,11 @@
 	<div class="container col-md-5">
 		<div class="card">
 			<div class="card-body">
-			<form action="UserServlet" method="post">
-				<c:if test="${usuario != null}">
-					<form action="update" method="post">
-				</c:if>
-				<c:if test="${usuario == null}">
-					<form action="insert" method="post">
-				</c:if>
-				
+					<form action="update" method="post">				
 				<caption>
 					<h2>
 						<c:if test="${usuario != null}">
 						Edit User
-						</c:if>
-						<c:if test="${usuario == null}">
-						Add New User
 						</c:if>
 					</h2>
 				</caption>
@@ -59,7 +49,7 @@
 					<label>Pais</label> <input type="text" value="<c:out value='${usuario.pais}' /> " class="form-control" name="pais">
 				</fieldset>
 				
-				<button type="submit" class="btn btn-success">Salvar</button>
+				<button type="submit" class="btn btn-success">Editar</button>
 		</form>
 		
 		</div>

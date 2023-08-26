@@ -52,8 +52,20 @@ public class UserServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		String action = request.getServletPath();
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String pais = request.getParameter("pais");
+		Usuario newUser = new Usuario(name, email, pais);
 		try {
+			usuariodao1.insertUser(newUser);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		response.sendRedirect("list");
+		
+		//String action = request.getServletPath();
+		/*try {
 			switch(action) {
 			case "/new":
 				showNewForm(request,response);
@@ -77,16 +89,16 @@ public class UserServlet extends HttpServlet {
 			
 		}catch(SQLException e){
 			throw new ServletException(e);
-		}
+		}*/
 	}
 	
-	private void listUser(HttpServletRequest request, HttpServletResponse response)
+	/*private void listUser(HttpServletRequest request, HttpServletResponse response)
 		throws SQLException, IOException, ServletException {
 		List<Usuario> listUser = usuariodao1.selectAllUsers();
 		request.setAttribute("listUser", listUser);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
 		dispatcher.forward(request, response);
-	}
+	}*/
 	
 	private void showNewForm(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
@@ -94,14 +106,14 @@ public class UserServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 		}
 	
-	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
+	/*private void showEditForm(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
 			int id = Integer.parseInt(request.getParameter("id"));
 			Usuario existingUser = usuariodao1.selectUser(id);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
 			request.setAttribute("user", existingUser);
 			dispatcher.forward(request, response);
-		}
+		}*/
 	
 	private void insertUser(HttpServletRequest request, HttpServletResponse response)
 				throws SQLException, IOException {
