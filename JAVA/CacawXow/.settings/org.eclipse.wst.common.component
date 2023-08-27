@@ -2,9 +2,9 @@
     <wb-module deploy-name="CacawXow">
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.CacawXow"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.CacawXow.dao"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.CacawXow.entidade"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.CacawXow"/>
         <property name="context-root" value="CacawXow"/>
         <property name="java-output-path" value="/CacawXow/build/classes"/>
     </wb-module>
