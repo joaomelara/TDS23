@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ScolXow">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.scolxow.servelt"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.scolxow.dao"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.scolxow.entidade"/>
+        <property name="context-root" value="ScolXow"/>
+        <property name="java-output-path" value="/ScolXow/build/classes"/>
+    </wb-module>
+</project-modules>
